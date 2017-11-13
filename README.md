@@ -15,7 +15,8 @@ Use in a play like this
     - syslog-ng-role
 ```
     
-  References:
+References:
+
 [https://galaxy.ansible.com/slgevens/syslog-ng/](https://galaxy.ansible.com/slgevens/syslog-ng/)
 
 [https://galaxy.ansible.com/ihrwein/syslog-ng/](https://galaxy.ansible.com/ihrwein/syslog-ng/)  
