@@ -1,0 +1,17 @@
+---
+#tasks file for syslog-ng
+- name: install syslog-ng
+  yum:
+    name: syslog-ng
+    state: present
+  notify:
+  - start syslog-ng
+
+- name: "Configure syslog-ng"
+  template:
+    backup: yes
+    src: '{{syslog_ng_template}}'
+    dest: '{{syslog_ng_config_file}}'
+
+  notify:
+  - reload syslog-ng

@@ -1,0 +1,38 @@
+---
+# defaults file for syslog-ng
+syslog_ng_mode: server
+syslog_ng_group: root
+syslog_ng_user: root
+syslog_ng_config_dir: "/etc/syslog-ng"
+syslog_ng_config_file: "{{ syslog_ng_config_dir }}/syslog-ng.conf"
+syslog_ng_template: "server.j2"
+syslog_ng_syslog_locations: "/var/log/syslog-ng/"
+
+syslog_ng_config_options:
+  flush_lines: 0
+  time_reopen: 10
+  log_fifo_size: 100000
+  chain_hostnames: 'off'
+  use_dns: 'no'
+  use_fqdn: 'no'
+  dns_cache: 'no'
+  keep_hostname: 'no'
+  owner: '"{{syslog_ng_user}}"'
+  group: '"{{syslog_ng_group}}"'
+  perm: 0640
+  stats_freq: 0
+  bad_hostname: '"^gconfd$"'
+  create_dirs: 'yes'
+
+source_config:
+  src_A:
+    transport: udp
+    port: 1000
+    source: "0.0.0.0"
+    destination: std_A
+  src_B: 
+    transport: udp
+    port: 1001
+    source: "0.0.0.0"
+    destination: std_B
+
