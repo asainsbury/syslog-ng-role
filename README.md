@@ -16,7 +16,7 @@ Use in a play like this
 ```
     
   References:
-  https://galaxy.ansible.com/slgevens/syslog-ng/
-  https://galaxy.ansible.com/ihrwein/syslog-ng/
+[https://galaxy.ansible.com/slgevens/syslog-ng/](https://galaxy.ansible.com/slgevens/syslog-ng/) 
+[https://galaxy.ansible.com/ihrwein/syslog-ng/](https://galaxy.ansible.com/ihrwein/syslog-ng/)  
   
-  I took inspiration from the above roles, and made a more specific template.
+I took inspiration from the above roles, and made a more specific template.
